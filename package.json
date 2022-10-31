@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "html-entities": "^2.3.3",
+    "normalize.css": "^8.0.1",
     "util": "^0.12.5"
   }
 }
