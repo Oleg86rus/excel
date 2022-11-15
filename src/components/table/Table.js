@@ -33,11 +33,13 @@ export class Table extends ExcelComponent {
           const delta = Math.floor(e.pageX - coords.right)
           const value = coords.width + delta
           $parent.$el.style.width = value + 'px'
+          $parent.css({width: value + 'px'})
           cells.forEach(el => el.style.width = value + 'px')
         } else {
           const delta = Math.floor(e.pageY - coords.bottom)
           const value = coords.height + delta
           $parent.$el.style.height = value + 'px'
+          $parent.css({height: value + 'px'})
         }
       }
       document.onmouseup = () => {
