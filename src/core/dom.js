@@ -49,6 +49,14 @@ class Dom {
   getCoords() {
     return this.$el.getBoundingClientRect()
   }
+
+  findAll(selector) {
+    return this.$el.querySelectorAll(selector)
+  }
+
+  css(styles = {}) {
+    return this.$el.style = styles
+  }
 }
 
 $('div').html('<h1>Test</h1>').clear()
