@@ -62,11 +62,22 @@ class Dom {
     Object.keys(styles).forEach(key => this.$el.style[key] = styles[key])
   }
 
-  addCless(className) {
+  id(parse) {
+    if (parse) {
+      const parsed = this.id().split(':')
+      return {
+        row: +parsed[0],
+        col: +parsed[1]
+      }
+    }
+    return this.data.id
+  }
+
+  addClass(className) {
     this.$el.classList.add(className)
   }
 
-  removeCless(className) {
+  removeClass(className) {
     this.$el.classList.remove(className)
   }
 }
