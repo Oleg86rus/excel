@@ -41,10 +41,10 @@ export function createToolbar(state) {
     },
     {
       icon: 'format_underlined',
-      active: state['textDecoration'] === 'underlined',
-      value: {textDecoration: state['textDecoration'] === 'underlined'
-          ? 'normal'
-          : 'underlined'}
+      active: state['textDecoration'] === 'underline',
+      value: {textDecoration: state['textDecoration'] === 'underline'
+          ? 'none'
+          : 'underline'}
     },
   ]
   return buttons.map(toButton).join('')
