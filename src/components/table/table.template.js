@@ -1,6 +1,6 @@
 import {toInlineStyles} from '@core/utils'
 import {defaulsStyles} from '@/constants'
-import {parse} from '@/core/parse'
+import {parse} from '@core/parse'
 
 const CODES = {
   A: 65,
