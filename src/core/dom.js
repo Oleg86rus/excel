@@ -14,6 +14,8 @@ class Dom {
   }
 
   text(text) {
+    console.log('text', text)
+    console.log(typeof text)
     if (typeof text !== 'undefined') {
       this.$el.textContent = text
       return this
