@@ -10,7 +10,7 @@ import {Formula} from '@/components/formula/Formula'
 import {Table} from '@/components/table/Table'
 
 function storageName(param) {
-  return 'excel' + param
+  return 'excel:' + param
 }
 
 export class ExcelPage extends Page {
