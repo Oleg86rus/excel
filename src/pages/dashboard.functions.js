@@ -6,7 +6,10 @@ function toHTML(key) {
   return `
       <li class="db__record">
         <a href="#excel/${id}">${model.title}</a>
-        <strong>01.11.2022</strong>
+        <strong>
+					${new Date(model.openDate).toLocaleDateString()}
+					${new Date(model.openDate).toLocaleTimeString()}
+        </strong>
       </li>
 	`
 }
@@ -26,17 +29,16 @@ function getAllKeys() {
 
 export function createRecordsTable() {
   const keys = getAllKeys()
-  console.log('keys', keys)
   if (!keys.length) {
     return `<p>Вы пока не создали ни одной таблицы</p>`
   }
   return `
-	<div className="db__list-header">
+	<div class="db__list-header">
 		<span>Название</span>
 		<span>Дата открытия</span>
 	</div>
 
-	<ul className="db__list">
+	<ul class="db__list">
 		${keys.map(toHTML).join('')}
 	</ul>
 `
