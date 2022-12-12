@@ -1,1 +1,1 @@
-# excel
+# Прототип Excel на Pure JS
